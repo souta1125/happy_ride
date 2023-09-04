@@ -1,0 +1,188 @@
+html{
+  /* コピー禁止！！ */
+  -webkit-user-select: none;
+}
+
+body{
+  background-color: #fff;
+  color: #000;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 100%;
+  width: 100%;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  position: relative;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+/* wrap */
+.wrap{
+  background-color: #B6C7D7;
+  background-image: url('./img/bg.png');
+  height: 100%;
+  width: 100;
+  position: relative;
+}
+
+/* BayMax */
+.BayMax{
+  background-color: #D2D2D2;
+  height: 100%;
+  width: 100%;
+}
+
+/* main_content */
+.main_content{
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* main_monitor */
+.main_monitor .main_monitor_inner{
+  aspect-ratio: 16/9;
+  background-color: #fff;
+  box-shadow: 0 0 3px #333;
+  color: #211e1b;
+  margin: 40px auto;
+  padding: 0 0 20px;
+  width: 90%;
+}
+
+.main_monitor .main_monitor_inner h1{
+  font-family: 'Zen Dots', cursive;
+  font-size: 3.5vw;
+  letter-spacing: 0.1rem;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.main_monitor .main_monitor_inner .consoleLog{
+  aspect-ratio: 16/9;
+  box-shadow: 0 0 3px #333;
+  margin: 0 auto;
+  width: 90%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.main_monitor .main_monitor_inner .consoleLog::-webkit-scrollbar{
+  display: none;
+}
+
+.main_monitor .main_monitor_inner .consoleLog > *{
+  font-size: 1.0rem;
+  padding: 0 0 5px 10px;
+}
+
+.main_monitor .main_monitor_inner .consoleLog .attantion{
+  color: red;
+}
+
+/* btn */
+.btn_wrap{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.btn_wrap .btn_content{
+  aspect-ratio: 1/1;
+  background-color: #fff;
+  box-shadow: 0 0 3px #333;
+  color: #211e1b;
+  margin: 20px auto;
+  padding: 20px 20px;
+  text-align: center;
+  font-size: 2.1vw;
+  width: 40%;
+  max-width: 250px;
+}
+
+.btn_wrap .btn_content .btn_txt{
+  margin-bottom: 3.9vw;
+}
+
+.btn_wrap .btn_content span{
+  aspect-ratio: 1/1;
+  background: linear-gradient(135deg, #fff 22%, #ddd 44%, #a5a5a5 52%, #000 100%);
+  border-radius: 50%;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: inline-block;
+  height: 19.7vw;
+  margin: 0 auto;
+  position: relative;
+}
+
+.btn_wrap .btn_content span::before{
+  aspect-ratio: 1/1;
+  background: linear-gradient(135deg, #515151 19%, #ededed 50%, #fff 100%);
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: 17.5vw;
+  position: absolute;
+  top: 1.0vw;
+  left: 1.0vw;
+}
+
+.btn_wrap .btn_content span::after{
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  content: '';
+  display: inline-block;
+  height: 15.3vw;
+  position: absolute;
+  top: 2.3vw;
+  left: 2.3vw;
+}
+
+.btn_wrap .btn_content span.is_orange::after{
+  background: linear-gradient(135deg, #FF7825 0%, #FF6100 100%);
+}
+
+.btn_wrap .btn_content span.is_green::after{
+  background: linear-gradient(135deg, #32A26C 0%, #00BF63 100%);
+}
+
+.btn_wrap .btn_content span.is_red::after{
+  background: linear-gradient(135deg, #FF0505 0%, #E41A1A 100%);
+}
+
+@media (min-width : 768px) {
+  .BayMax{
+    box-shadow: 0 0 3px #333;
+    margin: 0 auto;
+    max-width: 768px;
+  }
+  .main_monitor .main_monitor_inner h1{
+    font-size: 27px;
+  }
+  .btn_wrap .btn_content{
+    font-size: 16px;
+  }
+  .btn_wrap .btn_content .btn_txt{
+    margin-bottom: 30px;
+  }
+  .btn_wrap .btn_content span{
+    height: 150px;
+  }
+  .btn_wrap .btn_content span::before{
+    height: 135px;
+    top: 6.5px;
+    left: 6.5px;
+  }
+  .btn_wrap .btn_content span::after{
+    height: 117px;
+    top: 16.7px;
+    left: 16.7px;
+  }
+}
